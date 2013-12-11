@@ -5,7 +5,7 @@
         %ol{:class => "nav nav-pills nav-stacked"}
             %li=link_to "Back to Assignments", assignments_path()
     %div{:class => "col-md-8"}
-        =form_tag(assignment_path, method: "put", :class => "form-horizontal", :id => "aForm") do
+        =form_tag(assignment_path, method: "put", :class => "form-horizontal", :id => "aForm", :enctype => "multipart/form-data") do
             %div{:class => "form-group"}
                 -if flash[:notice]
                     %label{:class => "message col-md-3 control-label pull-left", :id => "notice"}= flash[:notice]
@@ -23,6 +23,13 @@
                 %label{:for => "inputDescription", :class => "col-sm-3 control-label"}Description
                 %div{:class => "col-sm-4", :id => "inputDescription"}
                     %textarea{:class => "form-control", :name => "assignment[description]"}#{@assignment.description}
+            %div{:class => "form-group"}
+                %label{:class => "col-sm-3 control-label"}Upload updated file
+                %div{:class => "input-group col-sm-4", :id => "inputDescription"}
+                    %span{:class => "input-group-btn"}
+                        %span{:class => "btn btn-default btn-file"}
+                            %input{:type => "file", :name => "file"}Open file
+                    %input{:type => "text", :class =>"form-control feedback", :readonly =>"true"}
             %div{:class => "form-group"}
                 %div{:class => "col-sm-offset-3 col-sm-10"}
                     %button{:type => "submit", :class => "btn btn-default"}Save

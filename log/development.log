@@ -28038,3 +28038,4 @@ Migrating to CreateAssignments (20131115214359)
   [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131115214359')[0m
   [1m[35m (317.9ms)[0m  commit transaction
   [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml

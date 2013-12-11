@@ -14,7 +14,6 @@ class AssignmentsController < ApplicationController
             n = 0
             infile = params[:file].read
             CSV.parse(infile) do |row|
-                puts row
                 n+=1
                 #SKIP: header
                 next if n == 1
@@ -50,8 +49,26 @@ class AssignmentsController < ApplicationController
     def update
         @assignment = Assignment.find(params[:id])
         @assignments = Assignment.where("title = ?", @assignment.title)
-        @assignments.each do |assignment|
-            assignment.update_attributes!(params[:assignment])
+        if params[:file]
+            #delete all assignments and make new ones
+            @assignments.each do |assignment|
+                assignment.destroy
+            end
+            #create new assignments from new params
+            n = 0
+            infile = params[:file].read
+            CSV.parse(infile) do |row|
+                n+=1
+                #SKIP: header
+                next if n == 1
+                #build assignment from row in file
+                assignment = Assignment.build_from_csv(row, params[:assignment])
+            end
+            @assignment = Assignment.find_by_title(params[:assignment][:title])
+        else #just update assignment params
+            @assignments.each do |assignment|
+                assignment.update_attributes!(params[:assignment])
+            end
         end
         redirect_to assignment_path(@assignment)
     end
