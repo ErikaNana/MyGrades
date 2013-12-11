@@ -3,6 +3,7 @@ class Assignment < ActiveRecord::Base
     attr_accessible :description
     attr_accessible :user_id
     attr_accessible :grade
+    attr_accessible :due_date
 
     def self.build_from_csv(row, params)
         row.compact! #take out nil values, figure out why they were there later

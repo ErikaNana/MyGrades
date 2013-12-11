@@ -3,17 +3,22 @@ class AssignmentsController < ApplicationController
         @assignments = Assignment.all
     end
     def create
-        n = 0
-        infile = params[:file].read
-        CSV.parse(infile) do |row|
-            n+=1
-            #SKIP: header
-            next if n == 1
-            #build assignment from row in file
-            assignment = Assignment.build_from_csv(row, params[:assignment])
-            raise assignment.inspect
+        #check if params are empty
+        if params[:assignment].values.include?("")
+            flash[:warning] = "Please fill in all fields"
+            redirect_to :back
+        else
+            n = 0
+            infile = params[:file].read
+            CSV.parse(infile) do |row|
+                n+=1
+                #SKIP: header
+                next if n == 1
+                #build assignment from row in file
+                assignment = Assignment.build_from_csv(row, params[:assignment])
+            end
+            redirect_to assignments_path
         end
-        redirect_to assignments_path
     end
     def show
         id = params[:id]

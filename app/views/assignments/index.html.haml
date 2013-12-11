@@ -8,6 +8,9 @@
             %h3 Assignments
             %table{:class => "table table-striped"}
                 %tbody
-                    -@assignments.each do |assignment|
-                        %tr
-                            %td=link_to assignment.title, assignment_path(assignment)
+                    -if @assignments.empty?
+                        %td No assignments so far
+                    -else
+                        -@assignments.each do |assignment|
+                            %tr
+                                %td=link_to assignment.title, assignment_path(assignment)
