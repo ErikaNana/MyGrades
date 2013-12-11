@@ -5,7 +5,7 @@ class CreateAssignments < ActiveRecord::Migration
         t.string 'description'
         t.string 'user_id'
         t.string 'grade'
-        t.string 'due_date'
+        t.string 'dueDate'
     end
   end
 

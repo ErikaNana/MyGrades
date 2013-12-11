@@ -1,11 +1,11 @@
-%h2 Create New Assignment
+%h2 Edit Assignment
 %div{:class => "row"}
     %div{:class => "col-md-2"}
         %h3 Navigation
         %ol{:class => "nav nav-pills nav-stacked"}
             %li=link_to "Back to Assignments", assignments_path()
     %div{:class => "col-md-8"}
-        %form{:enctype => "multipart/form-data",:role => "form-center", :action => assignments_path, :method => "post", :class => "form-horizontal", :id => "aForm"}
+        =form_tag(assignment_path, method: "put", :class => "form-horizontal", :id => "aForm") do
             %div{:class => "form-group"}
                 -if flash[:notice]
                     %label{:class => "message col-md-3 control-label pull-left", :id => "notice"}= flash[:notice]
@@ -14,22 +14,15 @@
             %div{:class => "form-group"}
                 %label{:for => "inputAssignmentName", :class => "col-sm-3 control-label"}Assignment Name
                 %div{:class => "col-sm-4"}
-                    %input{:type => "text", :class => "form-control", :id => "inputAssignmentName", :name => "assignment[title]"}
+                    %input{:type => "text", :class => "form-control", :id => "inputAssignmentName", :name => "assignment[title]", :value => @assignment.title}
             %div{:class => "form-group"}
                 %label{:for => "inputDueDate", :class => "col-sm-3 control-label"}Due Date
                 %div{:class => "col-sm-4"}
-                    %input{:type => "text", :class => "form-control", :id => "inputDueDate", :name => "assignment[dueDate]"}
+                    %input{:type => "text", :class => "form-control", :id => "inputDueDate", :name => "assignment[dueDate]", :value => @assignment.dueDate}
             %div{:class => "form-group"}
                 %label{:for => "inputDescription", :class => "col-sm-3 control-label"}Description
                 %div{:class => "col-sm-4", :id => "inputDescription"}
-                    %textarea{:class => "form-control", :name => "assignment[description"}
-            %div{:class => "form-group"}
-                %label{:class => "col-sm-3 control-label"}CSV File of Grades
-                %div{:class => "input-group col-sm-4", :id => "inputDescription"}
-                    %span{:class => "input-group-btn"}
-                        %span{:class => "btn btn-default btn-file"}
-                            %input{:type => "file", :name => "file"}Open file
-                    %input{:type => "text", :class =>"form-control feedback", :readonly =>"true"}
+                    %textarea{:class => "form-control", :name => "assignment[description]"}#{@assignment.description}
             %div{:class => "form-group"}
                 %div{:class => "col-sm-offset-3 col-sm-10"}
                     %button{:type => "submit", :class => "btn btn-default"}Save

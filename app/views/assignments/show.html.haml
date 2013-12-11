@@ -16,4 +16,14 @@
                     %tr
                         %td#header Description
                         %td #{@assignment.description}
-
+            %table{:class => "table"}
+                %tbody
+                    %tr
+                        %th Student
+                        %th Grade
+                    -@assignments.each do |assignment|
+                        %tr
+                            %td
+                                =assignment.user_id
+                            %td
+                                =assignment.grade
