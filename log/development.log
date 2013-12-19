@@ -29753,3 +29753,159 @@ Served asset /jquery.js - 304 Not Modified (1ms)
 
 Started GET "/assets/button.js?body=1" for 127.0.0.1 at 2013-12-19 13:27:59 -0800
 Served asset /button.js - 304 Not Modified (8ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2013-12-19 13:42:14 -0800
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 67ms (Views: 66.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-12-19 13:42:14 -0800
+Served asset /custom.css - 304 Not Modified (36ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-19 13:42:14 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-19 13:42:14 -0800
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/button.js?body=1" for 127.0.0.1 at 2013-12-19 13:42:14 -0800
+Served asset /button.js - 304 Not Modified (8ms)
+
+
+Started GET "/assignments" for 127.0.0.1 at 2013-12-19 13:42:17 -0800
+Processing by AssignmentsController#index as HTML
+  [1m[36mAssignment Load (0.4ms)[0m  [1mSELECT "assignments".* FROM "assignments" [0m
+  Rendered assignments/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-12-19 13:42:17 -0800
+Served asset /custom.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-19 13:42:17 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-19 13:42:17 -0800
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/button.js?body=1" for 127.0.0.1 at 2013-12-19 13:42:17 -0800
+Served asset /button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2013-12-19 13:43:30 -0800
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 77ms (Views: 76.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-12-19 13:43:30 -0800
+Served asset /custom.css - 304 Not Modified (24ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-19 13:43:30 -0800
+Served asset /jquery.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-19 13:43:30 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/button.js?body=1" for 127.0.0.1 at 2013-12-19 13:43:30 -0800
+Served asset /button.js - 304 Not Modified (1ms)
+
+
+Started POST "/assignments" for 127.0.0.1 at 2013-12-19 13:43:38 -0800
+Processing by AssignmentsController#create as HTML
+  Parameters: {"assignment"=>{"title"=>"ksdfajdlkj", "dueDate"=>"skadfjlk", "description"=>"asdlfkjlk"}, "file"=>#<ActionDispatch::Http::UploadedFile:0xaf34f30 @original_filename="test.csv", @content_type="text/csv", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"test.csv\"\r\nContent-Type: text/csv\r\n", @tempfile=#<File:/tmp/RackMultipart20131219-1759-p3gawx>>}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `grade`
+Binary data inserted for `string` type on column `user_id`
+  [1m[36mSQL (8.2ms)[0m  [1mINSERT INTO "assignments" ("description", "dueDate", "grade", "title", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["description", "asdlfkjlk"], ["dueDate", "skadfjlk"], ["grade", "10.5"], ["title", "ksdfajdlkj"], ["user_id", "18078333"]]
+  [1m[35m (57.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `grade`
+Binary data inserted for `string` type on column `user_id`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "assignments" ("description", "dueDate", "grade", "title", "user_id") VALUES (?, ?, ?, ?, ?)  [["description", "asdlfkjlk"], ["dueDate", "skadfjlk"], ["grade", "11.5"], ["title", "ksdfajdlkj"], ["user_id", "12345678"]]
+  [1m[36m (52.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/assignments
+Completed 302 Found in 128ms (ActiveRecord: 118.9ms)
+
+
+Started GET "/assignments" for 127.0.0.1 at 2013-12-19 13:43:39 -0800
+Processing by AssignmentsController#index as HTML
+  [1m[35mAssignment Load (0.5ms)[0m  SELECT "assignments".* FROM "assignments" 
+  Rendered assignments/index.html.haml within layouts/application (12.0ms)
+Completed 200 OK in 80ms (Views: 75.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-12-19 13:43:39 -0800
+Served asset /custom.css - 304 Not Modified (35ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-19 13:43:39 -0800
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-19 13:43:39 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/button.js?body=1" for 127.0.0.1 at 2013-12-19 13:43:39 -0800
+Served asset /button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assignments/34" for 127.0.0.1 at 2013-12-19 13:43:42 -0800
+Processing by AssignmentsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mAssignment Load (0.1ms)[0m  [1mSELECT "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT 1[0m  [["id", "34"]]
+  [1m[35mAssignment Load (5.6ms)[0m  SELECT "assignments".* FROM "assignments" WHERE (title = 'ksdfajdlkj')
+  Rendered assignments/show.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 54ms (Views: 41.0ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-12-19 13:43:42 -0800
+Served asset /custom.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-19 13:43:42 -0800
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/button.js?body=1" for 127.0.0.1 at 2013-12-19 13:43:42 -0800
+Served asset /button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-19 13:43:42 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assignments" for 127.0.0.1 at 2013-12-19 13:43:44 -0800
+Processing by AssignmentsController#index as HTML
+  [1m[36mAssignment Load (0.4ms)[0m  [1mSELECT "assignments".* FROM "assignments" [0m
+  Rendered assignments/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 28.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-12-19 13:43:44 -0800
+Served asset /custom.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-19 13:43:44 -0800
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-19 13:43:44 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/button.js?body=1" for 127.0.0.1 at 2013-12-19 13:43:44 -0800
+Served asset /button.js - 304 Not Modified (4ms)
