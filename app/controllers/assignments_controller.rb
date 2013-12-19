@@ -6,8 +6,8 @@ class AssignmentsController < ApplicationController
         @assignments = @assignments.uniq{|x| x.title}
     end
     def create
-        #check if params are empty
-        if params[:assignment].values.include?("")
+        #check if params are empty 
+        if params[:assignment].values.include?("") or params[:file] == nil
             flash[:warning] = "Please fill in all fields"
             redirect_to :back
         else
@@ -19,9 +19,9 @@ class AssignmentsController < ApplicationController
                 next if n == 1
                 #build assignment from row in file
                 assignment = Assignment.build_from_csv(row, params[:assignment])
+                redirect_to assignments_path
             end
         end
-        redirect_to assignments_path
     end
     
     def show
