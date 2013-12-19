@@ -29432,3 +29432,161 @@ Served asset /application.js - 304 Not Modified (10ms)
 
 Started GET "/assets/button.js?body=1" for 127.0.0.1 at 2013-12-19 13:01:16 -0800
 Served asset /button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assignments" for 127.0.0.1 at 2013-12-19 13:07:36 -0800
+Processing by AssignmentsController#index as HTML
+  [1m[35mAssignment Load (4.4ms)[0m  SELECT "assignments".* FROM "assignments" 
+  Rendered assignments/index.html.haml within layouts/application (12.4ms)
+Completed 200 OK in 221ms (Views: 205.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-19 13:07:37 -0800
+Served asset /application.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-12-19 13:07:37 -0800
+Served asset /custom.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-19 13:07:37 -0800
+Served asset /jquery.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-19 13:07:37 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/button.js?body=1" for 127.0.0.1 at 2013-12-19 13:07:37 -0800
+Served asset /button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-19 13:07:37 -0800
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assignments/32" for 127.0.0.1 at 2013-12-19 13:07:39 -0800
+Processing by AssignmentsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mAssignment Load (0.2ms)[0m  [1mSELECT "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT 1[0m  [["id", "32"]]
+  [1m[35mAssignment Load (0.3ms)[0m  SELECT "assignments".* FROM "assignments" WHERE (title = 'One')
+  Rendered assignments/show.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 50ms (Views: 38.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-19 13:07:39 -0800
+Served asset /application.css - 304 Not Modified (52ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-12-19 13:07:39 -0800
+Served asset /custom.css - 304 Not Modified (139ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-19 13:07:39 -0800
+Served asset /jquery.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-19 13:07:40 -0800
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/button.js?body=1" for 127.0.0.1 at 2013-12-19 13:07:40 -0800
+Served asset /button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-19 13:07:40 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (16ms)
+
+
+Started GET "/assignments" for 127.0.0.1 at 2013-12-19 13:08:24 -0800
+Processing by AssignmentsController#index as HTML
+  [1m[36mAssignment Load (0.4ms)[0m  [1mSELECT "assignments".* FROM "assignments" [0m
+  Rendered assignments/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 63ms (Views: 54.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-19 13:08:24 -0800
+Served asset /application.css - 304 Not Modified (45ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-12-19 13:08:24 -0800
+Served asset /custom.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-19 13:08:24 -0800
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/button.js?body=1" for 127.0.0.1 at 2013-12-19 13:08:24 -0800
+Served asset /button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-19 13:08:24 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-19 13:08:24 -0800
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assignments/32" for 127.0.0.1 at 2013-12-19 13:08:28 -0800
+Processing by AssignmentsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mAssignment Load (0.2ms)[0m  SELECT "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT 1  [["id", "32"]]
+  [1m[36mAssignment Load (0.4ms)[0m  [1mSELECT "assignments".* FROM "assignments" WHERE (title = 'One')[0m
+  Rendered assignments/show.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 72ms (Views: 65.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-19 13:08:28 -0800
+Served asset /application.css - 304 Not Modified (39ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-12-19 13:08:28 -0800
+Served asset /custom.css - 304 Not Modified (52ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-19 13:08:28 -0800
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-19 13:08:28 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-19 13:08:28 -0800
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/button.js?body=1" for 127.0.0.1 at 2013-12-19 13:08:28 -0800
+Served asset /button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assignments/new" for 127.0.0.1 at 2013-12-19 13:08:31 -0800
+Processing by AssignmentsController#new as HTML
+  Rendered assignments/new.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-19 13:08:31 -0800
+Served asset /application.css - 304 Not Modified (131ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-12-19 13:08:31 -0800
+Served asset /custom.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-19 13:08:31 -0800
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/button.js?body=1" for 127.0.0.1 at 2013-12-19 13:08:31 -0800
+Served asset /button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-19 13:08:31 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-19 13:08:31 -0800
+Served asset /application.js - 304 Not Modified (11ms)
